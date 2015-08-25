@@ -19,5 +19,17 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <p>
+    <h1>site.time  当前时间（运行jekyll这个命令的时间点）。</h1>
+    {{site.time}}
+  </p>
+  <p>
+    <h1>site.categories.test1 所有的在 test1 类别下的帖子。</h1>
+    {{site.categories.test1}}
+  </p>
+  <p>
+    <h1>site.tags.test1 所有的在 test1 标签下的帖子。</h1>
+    {{site.tags.test1}}
+  </p>
+  
 </div>
