@@ -3,33 +3,45 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
+    <h1 class="page-heading">Posts</h1>
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  <p>
-    <h1>site.time  当前时间（运行jekyll这个命令的时间点）。</h1>
-    {{site.time}}
-  </p>
-  <p>
-    <h1>site.categories.test1 所有的在 test1 类别下的帖子。</h1>
-    {{site.categories.test1}}
-  </p>
-  <p>
-    <h1>site.tags.test1 所有的在 test1 标签下的帖子。</h1>
-    {{site.tags.test1}}
-  </p>
-  
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- 导航分页链接 -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a> {% else %}
+        <span class="previous">Previous</span> {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span> {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a> {% else %}
+        <span class="next ">Next</span> {% endif %}
+    </div>
+    <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="test">
+        <ul>
+            {% for member in site.data.members %}
+            <li>
+                <a href="https://github.com/{{ member.github }}">
+          {{ member.name }}
+        </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <p>
+            <h1>site.time  当前时间（运行jekyll这个命令的时间点）。</h1> {{site.time}}
+        </p>
+        <p>
+            <h1>site.categories.test1 所有的在 test1 类别下的帖子。</h1> {{site.categories.test1}}
+        </p>
+        <p>
+            <h1>site.tags.test1 所有的在 test1 标签下的帖子。</h1> {{site.tags.test1}}
+        </p>
+    </div>
 </div>
