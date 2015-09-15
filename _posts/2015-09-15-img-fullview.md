@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "imgFullview--基于重力感应的图片浏览插件"
+description: "可以让较宽图片在手机横屏状态全屏显示，并随手机倾斜而左右移动的JS插件"
+keywords: 重力感应,JS,插件
 date:   2015-09-15 14:42:42
 categories: technology js
 tags: js插件
