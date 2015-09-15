@@ -13,6 +13,7 @@ tags: js插件
 那么既然要这么做，我就直接写了一个简单的JS插件出来，以备不时之需。
 
 [Demo Page](/demo/2015-09-15-imgFullview/) *需用手机查看*
+[Github地址](https://github.com/BowenZ/imgFullView)
 
 先附上源代码：
 
