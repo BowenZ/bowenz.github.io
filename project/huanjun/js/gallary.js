@@ -125,7 +125,7 @@ function initPage() {
         readyCallback: function() {
             if ($('html').hasClass('x5')) {
                 var $wrapper = $('.wrapper');
-                $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 60));
+                $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 50));
             }
             setTimeout(function() {
                 $(window).trigger('resize');
@@ -238,7 +238,7 @@ function bindEvents() {
     $(window).on('resize', function() {
         if ($('.choice').height() < 75 && $(window).width() < $(window).height()) {
             $('.wrapper').addClass('small');
-            if ($('.choice').height() < 70 && $('.wrapper').hasClass('small') && $(window).width() < $(window).height()) {
+            if ($('.choice').height() < 55 && $('.wrapper').hasClass('small') && $(window).width() < $(window).height()) {
                 $('.wrapper').addClass('very-small');
             }
         } else if ($('.choice').height() > 140) {
@@ -246,7 +246,7 @@ function bindEvents() {
         }
         if ($('html').hasClass('x5')) {
             var $wrapper = $('.wrapper');
-            $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 60));
+            $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 50));
         }
     });
 }
