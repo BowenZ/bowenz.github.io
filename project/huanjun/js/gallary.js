@@ -57,6 +57,7 @@
     zGallary.prototype.next = function(direction, callback) {
         if (this.queue[1].length == 0 && !this.config.loop) {
             alert(this.config.endAlert);
+            callback();
             return;
         }
         var self = this;
