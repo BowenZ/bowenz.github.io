@@ -73,7 +73,11 @@ function playAni(){
 preloadImgs('.preload', function(){
     initPage();
     bindEvents();
-    $('.loading').hide();
+    setTimeout(function() {
+        $window.scrollTop(0);
+        $('.loading').hide();
+    }, 100);
+    
     $body.addClass('opened');
     setTimeout(function() {
         playAni();

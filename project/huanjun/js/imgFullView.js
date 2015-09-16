@@ -11,7 +11,7 @@
     	}
         this.$wrapper = typeof el == 'string' ? $(el) : el;
         this.$imgs = this.$wrapper.find('>img');
-        console.log(this.$wrapper);
+        // console.log(this.$wrapper);
         this.options = {
         	time: 60,
         	sensitivity: 8

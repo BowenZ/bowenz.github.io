@@ -103,33 +103,33 @@ var gallary,
     $mainMenu = $('.main-menu');
 
 function initPage() {
-    gallary = new zGallary('.gallary-container', ["img/gallary/2.jpg",
+    gallary = new zGallary('.gallary-container', ["img/gallary/1.jpg",
         "img/gallary/2.jpg",
+        "img/gallary/3.jpg",
+        "img/gallary/4.jpg",
+        "img/gallary/5.jpg",
+        "img/gallary/6.jpg",
+        "img/gallary/7.jpg",
+        "img/gallary/8.jpg",
+        "img/gallary/9.jpg",
+        "img/gallary/10.jpg",
+        "img/gallary/11.jpg",
+        "img/gallary/12.jpg",
+        "img/gallary/1.jpg",
         "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg",
-        "img/gallary/2.jpg"
+        "img/gallary/3.jpg",
+        "img/gallary/4.jpg"
     ], {
         loop: true,
         readyCallback: function() {
-            setTimeout(function() {
-                $(window).trigger('resize');
-                $('.loading').hide();
-            }, 30);
             if ($('html').hasClass('x5')) {
                 var $wrapper = $('.wrapper');
                 $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 60));
             }
+            setTimeout(function() {
+                $(window).trigger('resize');
+                $('.loading').hide();
+            }, 30);
         }
     });
 
@@ -208,9 +208,9 @@ function bindEvents() {
 
             var direction = $(this).hasClass('btn-left') ? 'left' : 'right';
             if (direction == 'left') {
-        		choices[gallary.currentIndex] = 0;
-            }else{
-            	choices[gallary.currentIndex] = 1;
+                choices[gallary.currentIndex] = 0;
+            } else {
+                choices[gallary.currentIndex] = 1;
             }
 
             gallary.next(direction, function() {
@@ -233,15 +233,19 @@ function bindEvents() {
             }
         }
     });
-    
-    $(window).on('resize', function(){
-        if($('.choice').height() < 75 && $(window).width() < $(window).height()){
+
+    $(window).on('resize', function() {
+        if ($('.choice').height() < 75 && $(window).width() < $(window).height()) {
             $('.wrapper').addClass('small');
-            if($('.choice').height() < 70 && $('.wrapper').hasClass('small') && $(window).width() < $(window).height()){
+            if ($('.choice').height() < 70 && $('.wrapper').hasClass('small') && $(window).width() < $(window).height()) {
                 $('.wrapper').addClass('very-small');
             }
-        }else if($('.choice').height() > 140){
+        } else if ($('.choice').height() > 140) {
             $('.wrapper').removeClass('small');
+        }
+        if ($('html').hasClass('x5')) {
+            var $wrapper = $('.wrapper');
+            $wrapper.find('.choice').height($wrapper.height() - ($wrapper.find('.gallary-container').height() + $wrapper.find('.footer').height() + 60));
         }
     });
 }
