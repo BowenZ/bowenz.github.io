@@ -120,7 +120,7 @@ function initPage() {
         "img/gallary/3.jpg",
         "img/gallary/4.jpg"
     ], {
-        loop: true,
+        loop: false,
         readyCallback: function() {
             if ($('html').hasClass('x5')) {
                 var $wrapper = $('.wrapper');
