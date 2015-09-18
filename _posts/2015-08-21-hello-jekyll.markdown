@@ -9,7 +9,7 @@ tags: whatever
 # 这是第一篇Jekyll文章
 第一次用Jekyll，好**激动**啊！
 
-![](http://d04.res.meilishuo.net/pic/_o/dd/f1/56723e79bdc88d6ed98fe1b2bbf6_560_688.jpeg)
+![](http://bowen-blog.b0.upaiyun.com/0.gif)
 
 ```
 You're my wonderwall
