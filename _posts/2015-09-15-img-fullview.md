@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "imgFullview--基于重力感应的图片浏览插件"
+title:  "imgFullview"
+subtitle: "基于重力感应的图片浏览插件"
 description: "可以让较宽图片在手机横屏状态全屏显示，并随手机倾斜而左右移动的JS插件"
 keywords: 重力感应,JS,插件
 date:   2015-09-15 14:42:42
-categories: technology js
+categories: technology
 tags: js插件
+titleimg: "IMG_2718-1200x800.jpg"
 ---
 
 这几天项目中遇到了一个问题：在手机竖屏状态下查看16:9尺寸的图片时，如果使图片宽度100%的话，由于图片的比例，手机上下会有空白处，而且图片整体比较小，体验不是很好。
@@ -20,7 +22,7 @@ tags: js插件
 
 先附上源代码：
 
-{% highlight JavaScript linenos %}
+{% highlight JavaScript %}
 (function(window, $, TweenMax) {
     function ImgFullView(el, options) {
     	if (typeof window.DeviceOrientationEvent == 'undefined') {

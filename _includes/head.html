@@ -1,11 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js">
+<!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} - Bowen's blog</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
-    <link rel="stylesheet" href="{{ " /public/css/main.css " | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>App Name</title>
+    <meta name="description" content="">
+    <meta name="author" content="Bowen">
+    <meta name="keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- 控制状态栏显示样式 -->
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="favicon.ico" rel="Bookmark">
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/public/img/apple/apple-touch-icon-57x57-precomposed.png" />
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/img/apple/apple-touch-icon-72x72-precomposed.png" />
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/public/img/apple/apple-touch-icon-114x114-precomposed.png" />
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/public/img/apple/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="stylesheet" href="/public/css/index.css">
+    <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>-->
+    <!--<link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <script src="bower_components/material-design-lite/material.min.js"></script>-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> -->
 </head>

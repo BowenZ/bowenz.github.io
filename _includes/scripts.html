@@ -1,0 +1,65 @@
+<!--<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.0.7/js/swiper.min.js"></script>-->
+<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<!-- <script src="/public/js/vendor/jquery.pjax.js"></script> -->
+<script>
+window.jQuery || document.write('<script src="/public/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="/public/js/plugins.js"></script>
+<script src="/public/js/index.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>-->
+<script type="text/javascript">
+function loadFont() {
+    WebFontConfig = {
+        google: {
+            families: ['PT+Sans:400,700:latin']
+        }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        // wf.onload = function(){
+        // 	console.log(1);
+        // }
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+}
+// window.onload = loadFont();
+
+// $(document).pjax('.next-page', '#pjax-container', { fragment: "#pjax-container", timeout: 10000 });
+var currentPage = 1,
+	$articleList = $('.article-list'),
+	$nextPage = $('.next-page'),
+	loadLock = false; 
+$('.next-page').click(function(event) {
+	if(loadLock) return false;
+	loadLock = true;
+	$nextPage.addClass('active');
+	$.get($(this).attr('href'), function(data) {
+		var $result = $(data);
+		var pageNum = $result.find('.next-page').attr('href');
+		if(pageNum){
+			$articleList.append($result.find('.article-list article'));
+			$nextPage.attr('href', $result.find('.next-page').attr('href'));
+		}else{
+			$nextPage.find('.load-text').text('没有了');
+		}
+		$nextPage.removeClass('active');
+		loadLock = false;
+	});
+	// console.log($(this).attr('href'));
+	return false;
+});
+</script>

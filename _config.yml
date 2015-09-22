@@ -15,3 +15,6 @@ permalink: /blog/:year/:month/:day/:title
 
 paginate: 5   #这里指定你每一页的文章数目，我这里指定每页最多2篇文章
 paginate_path: "/page:num/"   #这里是分页链接的格式，例如第二页会显示在'/page2/'
+
+# custom
+indeximg: IMG_9851-1200x800.jpg
