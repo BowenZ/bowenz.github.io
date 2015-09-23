@@ -1,8 +1,19 @@
 # Site settings
-title: Bowen
+
+# ++++++meta tags+++++++
+title: Bowen Blog
 email: fantastic.bowen@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   赵先生写东西的地方
+robots: all  	#all：文件将被检索，且页面上的链接可以被查询；
+				#none：文件将不被检索，且页面上的链接不可以被查询；(和 "noindex, no follow" 起相同作用)
+				#index：文件将被检索；（让robot/spider登录）
+				#follow：页面上的链接可以被查询；
+				#noindex：文件将不被检索，但页面上的链接可以被查询；(不让robot/spider登录)
+				#nofollow：文件将不被检索，页面上的链接可以被查询。(不让robot/spider顺着此页的连接往下探找)
+author: ZhaoBowen
+# ++++++++++++++++++++++
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bowenz.github.io/" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
