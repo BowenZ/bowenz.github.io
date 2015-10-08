@@ -1,7 +1,19 @@
-## 1.阿里云配置
+---
+layout: post
+title:  "阿里云配置Nodejs环境"
+subtitle: "CentOS系统安装Nodejs、Express、pm2、MongoDB"
+description: "Bowen的私房博客，记录一切"
+keywords: 阿里云,node.js,Express,pm2,MongoDB
+date:   2015-10-08 17:54:42
+categories: technology node.js
+tags: 阿里云 服务器 node.js Express pm2 MongoDB
+titleimg: "photo-1436564989038-18b9958df72b.jpg"
+---
+
+#### 1.阿里云配置
 CPU：1核，内存：512MB，系统：CentOS 7.0 64位，Linux系统送20G系统盘（Windows送40G），区域：杭州节点，价格：32/月
 
-## 2.服务器基本配置
+#### 2.服务器基本配置
 1.在阿里云的管理控制台启动服务器
 2.
 2.用putty登录服务器（用putty登录一段时间不操作就会自动断线，因为阿里服务器有连接时间限制，目的是为了降低服务器端的连接压力，如果需要一直连接可以在putty的Connection中，将“Seconds between keeplives(0 to turn off)”设置为30）
@@ -9,7 +21,7 @@ CPU：1核，内存：512MB，系统：CentOS 7.0 64位，Linux系统送20G系�
 
 3.更新软件--yum -y update  （-y命令可以在询问时默认yes）
 
-## 3.安装nodejs
+#### 3.安装nodejs
 1.进入/usr/src/目录`cd /usr/src`
 
 2.从[nodejs官网](http://nodejs.org/)获取最新的nodejs
@@ -32,7 +44,7 @@ echo "export PATH=$PATH:/home/node/v4.1.2/bin" >> ~/.bash_profile
 
 5.输入node -v测试
 ![](http://bowen-blog.b0.upaiyun.com/img/2015/100802.png)
-## 3.安装Express
+#### 4.安装Express
 `npm install express -gd` （-d可以同时安装依赖的模块包）
 
 此时输入express -V会出现  `express: command not found.`
@@ -45,7 +57,7 @@ npm install -g express-generator
 测试express：输入express test -e（选择ejs模板），cd test， npm install，安装完成后输入 npm start启动应用，然后就可以在浏览器中输入 ip地址:3000  访问
 ![](http://bowen-blog.b0.upaiyun.com/img/2015/100804.png)
 
-## 4.安装[pm2](http://pm2.keymetrics.io/) （在另外一篇中详细介绍pm2）
+#### 5.安装[pm2](http://pm2.keymetrics.io/) （在另外一篇中详细介绍pm2）
 pm2 是一个带有负载均衡功能的Node应用的进程管理器，不了解的同学可以先去官网看看介绍，以后会单独写一篇关于pm2的文章.
 ```
 npm install pm2 -g
@@ -66,7 +78,7 @@ npm install pm2 -g
 退出程序：`pm2 stop <app_name|id|all>`
 重起应用：`pm2 restart`
 
-## 5.安装MongoDB
+#### 6.安装MongoDB
 
 进入`/usr/local/`
 
