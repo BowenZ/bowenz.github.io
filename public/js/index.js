@@ -1,4 +1,5 @@
 (function() {
+	document.addEventListener('touchstart',function(){},false);
     var tap = (!platform.isDesktop && platform.hasTouch) ? 'touchstart' : 'click';
     $('.menu-expander').on(tap, function() {
         $('.main-menu').toggleClass('active');
