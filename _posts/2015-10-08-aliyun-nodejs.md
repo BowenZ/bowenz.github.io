@@ -15,7 +15,7 @@ CPU：1核，内存：512MB，系统：CentOS 7.0 64位，Linux系统送20G系�
 
 #### 2.服务器基本配置
 1.在阿里云的管理控制台启动服务器
-2.
+
 2.用putty登录服务器（用putty登录一段时间不操作就会自动断线，因为阿里服务器有连接时间限制，目的是为了降低服务器端的连接压力，如果需要一直连接可以在putty的Connection中，将“Seconds between keeplives(0 to turn off)”设置为30）
 ![](http://bowen-blog.b0.upaiyun.com/img/2015/100801.png)
 
@@ -25,11 +25,14 @@ CPU：1核，内存：512MB，系统：CentOS 7.0 64位，Linux系统送20G系�
 1.进入/usr/src/目录`cd /usr/src`
 
 2.从[nodejs官网](http://nodejs.org/)获取最新的nodejs
+
 ```
 wget https://nodejs.org/dist/v4.1.2/node-v4.1.2.tar.gz
 ```
+
  也可从[这里](https://nodejs.org/en/download/)找到Source Code，查看最新版本后下载）
 3.安装
+
 ```
 tar zxvf node-v4.1.2.tar.gz
 cd node-v4.1.2
@@ -37,7 +40,9 @@ cd node-v4.1.2
 make  //编译源代码 
 make install
 ```
+
 4.添加nodejs到系统环境
+
 ```
 echo "export PATH=$PATH:/home/node/v4.1.2/bin" >> ~/.bash_profile
 ```
@@ -45,13 +50,17 @@ echo "export PATH=$PATH:/home/node/v4.1.2/bin" >> ~/.bash_profile
 5.输入node -v测试
 ![](http://bowen-blog.b0.upaiyun.com/img/2015/100802.png)
 #### 4.安装Express
+
 `npm install express -gd` （-d可以同时安装依赖的模块包）
 
 此时输入express -V会出现  `express: command not found.`
+
 原来是express4版本更新，之前版本命令行工具是集成在一起的，新版本单独分离到express-generator中了，所以需要
+
 ```
 npm install -g express-generator
 ```
+
 然后再输入`express -V`
 ![](http://bowen-blog.b0.upaiyun.com/img/2015/100803.png)
 测试express：输入express test -e（选择ejs模板），cd test， npm install，安装完成后输入 npm start启动应用，然后就可以在浏览器中输入 ip地址:3000  访问
