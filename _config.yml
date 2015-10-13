@@ -4,7 +4,8 @@
 title: Bowen Blog
 email: fantastic.bowen@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  赵先生写东西的地方
+  赵先生写日志的地方
+keywords: Bowen 博客 blog 前端 NodeJS
 robots: all  	
 #all：文件将被检索，且页面上的链接可以被查询；
 #none：文件将不被检索，且页面上的链接不可以被查询；(和 "noindex, no follow" 起相同作用)
@@ -16,7 +17,7 @@ author: ZhaoBowen
 # ++++++++++++++++++++++
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://bowenz.github.io/" # the base hostname & protocol for your site
+url: "http://zbw.name/" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  BowenZ
 encoding: UTF-8

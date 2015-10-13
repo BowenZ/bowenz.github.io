@@ -13,7 +13,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="robots" content="{{ site.robots }}">
     <meta name="author" content="{{ site.author }} {{ site.email }}">
-    <meta name="keywords" content="{% if page.keywords %} {{page.keywords}} {% else %} {{ site.keywords }} {% endif %}">
+    <meta name="keywords" content="{{ site.keywords }} {{page.keywords}}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- 删除默认的苹果工具栏和菜单栏。 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
