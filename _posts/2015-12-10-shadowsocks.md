@@ -11,6 +11,8 @@ titleimg: "2015/121000.jpg"
 
 #### 一、准备：
 - VPS: CentOS 7 64-Bit
+- PC: Win8 64bin
+- Shadowsocks客户端 （作者clowwindy在15年8月被请去喝茶，无奈删除Github上的所有内容，如果找不到下载可到[这里](http://pan.baidu.com/s/1jG5u1P8)下载）
 
 官方推荐：
 
@@ -18,9 +20,6 @@ titleimg: "2015/121000.jpg"
 为了更好的性能，VPS 尽量选择 XEN 或 KVM，不要使用 OpenVZ。推荐使用以下 VPS：
 - [Digital Ocean](https://www.digitalocean.com/?refcode=b1cddd149721) 自带的内核无需自己编译模块即可使用 [hybla](https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks) 算法
 - [Linode](https://www.linode.com/?r=e7932c8b03f9abc8aab71663b90b689a676402d1) 功能强大，机房较多
-
-- PC: Win8 64bin
-- Shadowsocks客户端 （作者clowwindy在15年8月被请去喝茶，无奈删除Github上的所有内容，如果找不到下载可到[这里](http://pan.baidu.com/s/1jG5u1P8)下载）
 
 #### 二、配置--Nodejs
 
@@ -43,7 +42,7 @@ Shadowsocks会被安装到/home/node/v4.1.2/lib/node_modules目录下
 `vi config.json`
 按I键进入编辑模式，修改配置文件，以下供参考
 
-```
+{% highlight JSON %}
 {
     "server":"0.0.0.0",
     "server_port":3999（监听端口，可自己定义，不要与其他端口冲突）,
@@ -53,7 +52,7 @@ Shadowsocks会被安装到/home/node/v4.1.2/lib/node_modules目录下
     "timeout":600,
     "method":"aes-256-cfb"（加密方式，默认就好）
 }
-```
+{% endhighlight %}
 
 修改之后按‘esc’键，之后按‘:x’保存并退出
 
