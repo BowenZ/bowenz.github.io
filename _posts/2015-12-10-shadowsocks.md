@@ -35,6 +35,7 @@ Python version handles 5000 connections with 50MB RAM while node.js version hand
 ##### 1.安装Shadowsocks
 `npm install -g shadowsocks`
 Shadowsocks会被安装到/home/node/v4.1.2/lib/node_modules目录下
+
 ##### 2.服务器端配置
 进入shadowsocks安装目录
 `cd /home/node/v4.1.2/lib/node_modules/shadowsocks`
