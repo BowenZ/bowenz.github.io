@@ -2,52 +2,25 @@
 layout: default 
 ---
 <div class="post">
-    <!-- <div class="test">
-        <p>
-            <h1>page.title 页面的标题。</h1> {{page.title}}
-        </p>
-        <p>
-            <h1>page.excerpt 页面摘要的源码。</h1> {{page.excerpt}}
-        </p>
-        <p>
-            <h1>page.url 帖子以斜线打头的相对路径</h1> {{page.url}}
-        </p>
-        <p>
-            <h1>page.date 帖子的日期。</h1> {{page.date}}
-        </p>
-        <p>
-            <h1>page.id 帖子的唯一标识码</h1> {{page.id}}
-        </p>
-        <p>
-            <h1>page.categories 这个帖子所属的 Categories</h1> {{page.categories}}
-        </p>
-        <p>
-            <h1>page.tags 这个 Post 所属的所有 tags。Tags 是在YAML 头文件信息中被定义的</h1> {{page.tags}}
-        </p>
-        <p>
-            <h1>page.path Post 或者 Page 的源文件地址</h1> {{page.path}}
-        </p>
-        <p>
-            <h1>page.next</h1> {{page.next}}
-        </p>
-        <p>
-            <h1>page.previous</h1> {{page.previous}}
-        </p>
-    </div> -->
     <article class="post-container">
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <div class="post-meta clearfix">
+                {% if page.date %}
                 <div class="meta date">
                     <span class="icon-pie-graph"></span>
                     {{ page.date | date: "%Y-%m-%d" }}
                 </div>
+                {% endif %}
+
+                {% if page.tags %}
                 <div class="meta tags">
                     <span class="icon-tag"></span>
                     {% for tag in page.tags %}
                     <a href="#">#{{ tag }}</a>
                     {% endfor %}
                 </div>
+                {% endif %}
             </div>
         </header>
         <div class="post-content">
