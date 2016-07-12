@@ -5,14 +5,14 @@ description: "Bowen的私房博客，记录一切"
 keywords: Shadowsocks,翻墙
 date:   2015-12-10 15:26:42
 categories: software
-tags: Shadowsocks 翻墙 软件
+tags: 软件
 titleimg: "2015/121000.jpg"
 ---
 
 #### 一、准备：
 - VPS: CentOS 7 64-Bit
 - PC: Win8 64bin
-- Shadowsocks客户端 （作者clowwindy在15年8月被请去喝茶，无奈删除Github上的所有内容，如果找不到下载可到[这里](http://pan.baidu.com/s/1jG5u1P8)下载）
+- Shadowsocks客户端 （作者clowwindy在15年8月被请去喝茶，无奈删除Github上的所有内容，之前还能在某网盘下载，现在好多资源都删掉了，所以常规方法已经很难找到）
 
 官方推荐：
 

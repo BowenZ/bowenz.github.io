@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: About
 permalink: /about/
 ---
@@ -11,3 +11,5 @@ permalink: /about/
 博客基于[Jekyll](http://jekyllrb.com/)，托管于Github，暂时没时间打理，所以样式简陋了些，以后有时间再装修一下吧。
 
 如果联系我，可以发邮件到[我的Gmail邮箱](mailto:fantastic.bowen@gmail.com)
+
+2015年8月

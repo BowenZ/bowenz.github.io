@@ -82,7 +82,7 @@ body {
         padding: 30px;
         .nav-btn {
             display: block;
-            width: 120px;
+            width: 48px;
             height: 40px;
             line-height: 40px;
             color: rgba(255, 255, 255, 0.8);
@@ -91,9 +91,9 @@ body {
             font-size: 20px;
             font-weight: lighter;
             transition: all .25s ease-out;
-            span {
-                margin-right: 6px;
-            }
+            // span {
+            //     margin-right: 6px;
+            // }
             &:hover {
                 color: #fff;
                 border-color: #bbb;
@@ -493,6 +493,14 @@ section {
                         margin-top: 0;
                         margin-bottom: 10px;
                         letter-spacing: 2px;
+                        -webkit-transition: color 0.1s ease-in-out;
+                        -moz-transition: color 0.1s ease-in-out;
+                        -o-transition: color 0.1s ease-in-out;
+                        transition: color 0.1s ease-in-out;
+                        a:hover{
+                            border-bottom: 1px solid #e74c3c;
+                            color: #e74c3c;
+                        }
                     }
                     h3 {
                         font-size: 12px;

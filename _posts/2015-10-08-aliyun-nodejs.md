@@ -3,10 +3,10 @@ layout: post
 title:  "阿里云配置Nodejs环境"
 subtitle: "CentOS系统安装Nodejs、Express、pm2、MongoDB"
 description: "Bowen的私房博客，记录一切"
-keywords: 阿里云,node.js,Express,pm2,MongoDB
+keywords: 阿里云,nodejs,Express,MongoDB
 date:   2015-10-08 17:54:42
 categories: technology node.js
-tags: 阿里云 服务器 node.js Express pm2 MongoDB
+tags: 服务器 node.js Express
 titleimg: "photo-1436564989038-18b9958df72b.jpg"
 ---
 

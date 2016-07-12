@@ -45,7 +45,7 @@ layout: default
                 </a>
             </div>
             <div class="article-preview">
-                <h2>{{ post.title }}</h2>
+                <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                 <h3>{{ post.subtitle }}</h3>
                 <p>
                     {{ post.content | strip_html | truncate:100 }}
