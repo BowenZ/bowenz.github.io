@@ -24,7 +24,7 @@ github_username:  BowenZ
 encoding: UTF-8
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title
 
 paginate: 5   #这里指定你每一页的文章数目，我这里指定每页最多2篇文章
