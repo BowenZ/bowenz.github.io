@@ -1,6 +1,4 @@
----
-layout: default
----
+--- layout: default ---
 <section class="latest-article">
     <div class="section-title">
         <div class="home-portfolio-title section-group-titles">
@@ -9,11 +7,17 @@ layout: default
     </div>
     <article>
         {% for post in site.posts offset: 0 limit: 1 %}
-        <p class="post-time"><span class="icon-pie-graph"></span><time>{{ post.date | date: "%Y-%m-%d" }}</time></p>
+        <p class="post-time"><span class="icon-pie-graph"></span>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+        </p>
         <a href="{{ post.url | prepend: site.baseurl }}">
             <div class="img-box">
                 <div class="article-img">
+                    {% if post.titleimg %}
                     <img src="/public/img/{{ post.titleimg }}" alt="">
+                    {% else %}
+                    <img src="/public/img/IMG_2902-1200x800.jpg" alt="">
+                    {% endif %}
                 </div>
                 <div class="title">
                     <h2>{{ post.title }}</h2>
@@ -24,8 +28,7 @@ layout: default
         <p>
             {{ post.content | strip_html | truncate:100 }}
         </p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="btn read-more">Continue Reading</a>
-        {% endfor %}
+        <a href="{{ post.url | prepend: site.baseurl }}" class="btn read-more">Continue Reading</a> {% endfor %}
     </article>
 </section>
 <section class="previous-articles">
@@ -37,12 +40,22 @@ layout: default
     <div class="article-list">
         {% for post in paginator.posts offset: 1 %}
         <article class="clearfix">
-            <p class="post-time"><span class="icon-pie-graph"></span><time>{{ post.date | date: "%Y-%m-%d" }}</time></p>
+            <p class="post-time"><span class="icon-pie-graph"></span>
+                <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+            </p>
+            {% if post.titleimg %}
             <div class="article-img">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <img src="/public/img/{{ post.titleimg }}" alt="">
+                </a>
+            </div>
+            {% else %}
+            <div class="article-img no-img">
                 <a href="{{ post.url | prepend: site.baseurl }}">
                     <img src="/public/img/IMG_2902-1200x800.jpg" alt="">
                 </a>
             </div>
+            {% endif %}
             <div class="article-preview">
                 <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                 <h3>{{ post.subtitle }}</h3>
@@ -55,7 +68,6 @@ layout: default
         {% endfor %}
     </div>
 </section>
-
 <div class="pagination">
     <!-- {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a> 
@@ -73,14 +85,10 @@ layout: default
                 <div class="bounce3"></div>
             </div>
         </div>
-    </a> 
+    </a>
     {% else %}
-    <span class="btn">后边没了</span> 
-    {% endif %}
+    <span class="btn">后边没了</span> {% endif %}
 </div>
-
-
-
 <div class="home">
     <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
 </div>

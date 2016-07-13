@@ -1268,8 +1268,6 @@ section.latest-article article a .img-box .article-img img {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
   transition: all 0.4s ease-out;
 }
 section.latest-article article a .img-box .title {
@@ -1296,10 +1294,6 @@ section.latest-article article a .img-box .title h3 {
   font-weight: lighter;
   margin: 10px 0;
 }
-section.latest-article article a:hover .img-box .article-img img {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-}
 section.latest-article article p {
   padding: 10px;
   margin-top: 8px;
@@ -1320,9 +1314,6 @@ section.previous-articles .article-list article .article-img img {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  transition: all 0.4s ease-out;
 }
 section.previous-articles .article-list article .article-preview {
   padding: 5px 20px;
@@ -1356,7 +1347,12 @@ section.previous-articles .article-list article .article-preview .read-more {
   bottom: 6px;
   text-transform: uppercase;
 }
-section.previous-articles .article-list article:hover .article-img img {
+.desktop .article-img img {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  transition: all 0.4s ease-out;
+}
+.desktop .article-img img:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
@@ -1408,7 +1404,6 @@ p img {
 .tablet section.previous-articles .article-list article .article-preview .read-more {
   border-bottom: 1px solid #333;
   padding-top: 5px;
-  padding-bottom: 5px;
 }
 .mobile section.previous-articles .article-list article .article-preview .read-more:hover,
 .tablet section.previous-articles .article-list article .article-preview .read-more:hover {
@@ -1454,6 +1449,9 @@ p img {
   .page-left {
     display: none;
   }
+  .article-img.no-img {
+    display: none;
+  }
   .content,
   footer.main-footer {
     margin: 0;
@@ -1468,6 +1466,40 @@ p img {
   }
   .main-menu.active .menu-expander {
     right: 250px;
+  }
+  .main-menu.active .menu-expander .nav-expander:before {
+    top: 18px;
+  }
+  .main-menu.active .menu-expander .nav-expander:after {
+    top: 18px;
+  }
+  .main-menu .menu-expander {
+    top: 8px;
+    right: 8px;
+    width: 46px;
+    height: 38px;
+  }
+  .main-menu .menu-expander .nav-expander {
+    width: 46px;
+    height: 38px;
+  }
+  .main-menu .menu-expander .nav-expander:before {
+    top: 9px;
+    left: 10px;
+    right: 10px;
+    border-top-width: 2px;
+  }
+  .main-menu .menu-expander .nav-expander span {
+    top: 18px;
+    left: 10px;
+    right: 10px;
+    border-top-width: 2px;
+  }
+  .main-menu .menu-expander .nav-expander:after {
+    top: 27px;
+    left: 10px;
+    right: 10px;
+    border-top-width: 2px;
   }
   .main-menu footer ul {
     margin-bottom: 5px;
