@@ -110,7 +110,7 @@ npm install pm2 -g
 
 进入`/usr/local/`
 
-下载安装包：wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz
+下载安装包：`wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz`
 
 安装：`tar -zxvf mongodb-linux-x86_64-3.0.6.tgz`
 

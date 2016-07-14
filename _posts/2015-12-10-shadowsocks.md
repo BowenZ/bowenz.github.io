@@ -17,11 +17,12 @@ titleimg: "2015/121000.jpg"
 官方推荐：
 
 > 建议选择 Ubuntu 14.04 LTS 作为服务器以便使用 [TCP Fast Open](https://github.com/shadowsocks/shadowsocks/wiki/TCP-Fast-Open)。除非有明确理由，不建议用对新手不友好的 CentOS。
-> 
+
 > 为了更好的性能，VPS 尽量选择 XEN 或 KVM，不要使用 OpenVZ。推荐使用以下 VPS：
 
->- [Digital Ocean](https://www.digitalocean.com/?refcode=b1cddd149721) 自带的内核无需自己编译模块即可使用 [hybla](https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks) 算法
-- [Linode](https://www.linode.com/?r=e7932c8b03f9abc8aab71663b90b689a676402d1) 功能强大，机房较多
+>1. [Digital Ocean](https://www.digitalocean.com/?refcode=b1cddd149721) 自带的内核无需自己编译模块即可使用 [hybla](https://github.com/shadowsocks/shadowsocks/wiki/Optimizing-Shadowsocks) 算法
+>
+>2. [Linode](https://www.linode.com/?r=e7932c8b03f9abc8aab71663b90b689a676402d1) 功能强大，机房较多
 
 #### 二、配置--Nodejs
 
@@ -102,4 +103,4 @@ PAC文件默认包含常用被墙网站的URL，包括google、faceboo、youtube
 
 
 #### 三、使用python搭建服务器
-这个是原作者推荐的安装方式，本来想自己写一个的，但是发现网上有位朋友已经总结的非常好，我就不在班门弄斧了，请移步 http://shadowsocks.blogspot.com/
+这个是原作者推荐的安装方式，本来想自己写一个的，但是发现网上有位朋友已经总结的非常好，我就不在班门弄斧了，请移步 [http://shadowsocks.blogspot.com/](http://shadowsocks.blogspot.com/)
