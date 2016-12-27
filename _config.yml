@@ -18,7 +18,7 @@ author: ZhaoBowen
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 imgurl: /public/img/
-url: http://zbw.name # the base hostname & protocol for your site
+url: http://zbw.life # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 github_username:  BowenZ
 encoding: UTF-8
