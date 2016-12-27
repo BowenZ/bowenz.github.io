@@ -236,6 +236,13 @@ pre code {
   border-radius: 0;
   border: none;
 }
+.highlighter-rouge pre {
+  border-radius: 15px;
+  background-color: #EAEAEA;
+  border-bottom: 1px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) inset, 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
 blockquote {
   padding: 10px 20px;
   border-left: 5px solid #eee;

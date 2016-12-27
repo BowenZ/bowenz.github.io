@@ -418,6 +418,13 @@ pre code {
   border-radius: 0;
   border: none;
 }
+.highlighter-rouge pre {
+  border-radius: 15px;
+  background-color: #EAEAEA;
+  border-bottom: 1px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) inset, 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
 blockquote {
   padding: 10px 20px;
   border-left: 5px solid #eee;
@@ -701,7 +708,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace, '微软雅黑', 'Microsoft Yahei';
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -895,7 +902,7 @@ a {
   color: inherit;
 }
 body {
-  font-family: PT sans, telexregular, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  font-family: 'PT sans', 'telexregular', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #333332;
@@ -1207,6 +1214,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 800px;
+  margin: auto;
 }
 .btn {
   display: inline-block;
@@ -1356,6 +1364,10 @@ section.previous-articles .article-list article .article-preview .read-more {
   transition: all 0.4s ease-out;
 }
 .desktop .article-img img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.desktop .article-list article:hover .article-img img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
