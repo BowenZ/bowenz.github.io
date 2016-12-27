@@ -1129,9 +1129,6 @@ body {
 .main-menu.active {
   right: 0;
 }
-.main-menu.active .menu-expander {
-  right: 300px;
-}
 .main-menu.active .menu-expander .nav-expander span {
   opacity: 0;
 }
