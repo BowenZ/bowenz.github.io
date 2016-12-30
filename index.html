@@ -30,7 +30,7 @@ layout: default
         <p>
             {{ post.content | strip_html | truncate:100 }}
         </p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="btn read-more">Continue Reading</a> {% endfor %}
+        <a href="{{ post.url | prepend: site.baseurl }}" class="btn read-more">Read More</a> {% endfor %}
     </article>
 </section>
 <section class="previous-articles">
@@ -64,7 +64,7 @@ layout: default
                 <p>
                     {{ post.content | strip_html | truncate:100 }}
                 </p>
-                <a href="{{ post.url | prepend: site.baseurl }}" class="read-more bold-link">Continue Reading</a>
+                <a href="{{ post.url | prepend: site.baseurl }}" class="read-more bold-link">Read More</a>
             </div>
         </article>
         {% endfor %}

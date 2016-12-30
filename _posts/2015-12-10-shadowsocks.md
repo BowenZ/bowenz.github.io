@@ -4,8 +4,8 @@ title:  "科学上网--使用VPS搭建shadowsocks服务器"
 description: "Bowen的私房博客，记录一切"
 keywords: Shadowsocks,翻墙
 date:   2015-12-10 15:26:42
-categories: software
-tags: 软件
+categories: [work, others]
+tags: [shadowsocks]
 titleimg: "2015/121000.jpg"
 ---
 

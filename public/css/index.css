@@ -859,7 +859,7 @@ body {
   font-family: 'PT sans', 'telexregular', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #333332;
+  color: #3a3a3a;
   font-size: 16px;
   line-height: 28px;
   background-color: #f9f9f9;
@@ -1047,7 +1047,7 @@ body {
   text-transform: uppercase;
 }
 .main-menu nav ul li a:hover {
-  color: #e74c3c;
+  color: #ee4938;
 }
 .main-menu nav ul li a.active:before {
   content: "";
@@ -1058,7 +1058,7 @@ body {
   top: 20px;
   left: 6px;
   margin: -3px 0 0 0;
-  background: #e74c3c;
+  background: #ee4938;
 }
 .main-menu nav ul li .icon {
   color: #666969;
@@ -1088,7 +1088,7 @@ body {
   color: #afafaf;
 }
 .main-menu nav ul li ul.sub-menu li a:hover {
-  color: #e74c3c;
+  color: #ee4938;
 }
 .main-menu footer {
   position: absolute;
@@ -1199,9 +1199,9 @@ body {
   line-height: 22px;
 }
 .bold-link:hover {
-  border-bottom: 1px solid #e74c3c;
+  border-bottom: 1px solid #ee4938;
   transition: all 0.3s ease-out;
-  color: #e74c3c;
+  color: #ee4938;
 }
 section {
   width: 100%;
@@ -1269,8 +1269,10 @@ section.previous-articles .article-list article {
   position: relative;
 }
 section.previous-articles .article-list article > div {
-  width: 50%;
   float: left;
+}
+section.previous-articles .article-list article .article-img {
+  width: 45%;
 }
 section.previous-articles .article-list article .article-img img {
   display: block;
@@ -1278,6 +1280,7 @@ section.previous-articles .article-list article .article-img img {
   height: auto;
 }
 section.previous-articles .article-list article .article-preview {
+  width: 55%;
   padding: 5px 20px;
   box-sizing: border-box;
 }
@@ -1312,7 +1315,7 @@ section.previous-articles .article-list article .article-preview .read-more {
 .desktop .article-img img {
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
-  transition: all 0.4s ease-out;
+  transition: all 0.2s ease-out;
 }
 .desktop .article-img img:hover {
   -webkit-filter: grayscale(0);
@@ -1348,7 +1351,7 @@ section.previous-articles .article-list article .article-preview .read-more {
 footer.main-footer {
   margin-left: 20%;
   width: 80%;
-  background-color: #F2F2F2;
+  background-color: #EEE;
 }
 footer.main-footer .copyright {
   padding-top: 20px;
@@ -1518,7 +1521,7 @@ p img {
   margin-right: 26px;
 }
 .post .post-container .post-header .post-meta .tags a:hover {
-  color: #e74c3c;
+  color: #ee4938;
 }
 .post .post-container .post-content {
   margin-top: 20px;
@@ -1538,8 +1541,8 @@ p img {
   line-height: 22px;
 }
 .post .post-container .post-content a:hover {
-  border-bottom: 1px solid #e74c3c;
+  border-bottom: 1px solid #ee4938;
   transition: all 0.3s ease-out;
-  color: #e74c3c;
+  color: #ee4938;
 }
 /* +++++++++++++++post+++++++++++++++ */

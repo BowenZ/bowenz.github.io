@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello Jekyll!"
 date:   2015-08-21 14:44:42
-categories: jekyll update
+categories: [life, journal]
 tags: whatever
 ---
 
