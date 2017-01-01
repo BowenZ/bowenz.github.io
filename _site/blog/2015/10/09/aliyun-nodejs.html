@@ -1,0 +1,389 @@
+  <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-CN" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> 阿里云配置Nodejs环境 - Bowen Blog</title>
+    <meta name="description" content="赵先生写日志的地方
+">
+    <meta name="robots" content="all">
+    <meta name="author" content="ZhaoBowen fantastic.bowen@gmail.com">
+    <meta name="keywords" content="Bowen 博客 blog 前端 NodeJS 阿里云,nodejs,Express,MongoDB">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- 控制状态栏显示样式 -->
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="/public/img/favicon.jpg" rel="shortcut icon">
+    <link href="/public/img/favicon.jpg" rel="Bookmark">
+    <!-- Standard iPhone -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/public/img/apple/apple-touch-icon-57x57-precomposed.png" />
+    <!-- Standard iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/img/apple/apple-touch-icon-72x72-precomposed.png" />
+    <!-- Retina iPhone -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/public/img/apple/apple-touch-icon-114x114-precomposed.png" />
+    <!-- Retina iPad -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/public/img/apple/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="stylesheet" href="/public/css/index.css">
+    <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>-->
+    <!--<link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <script src="bower_components/material-design-lite/material.min.js"></script>-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> -->
+</head>
+
+
+  <body>
+
+  <div class="wrapper">
+    <header class="page-left">
+    <div class="bg-img" style="background-image: url(/public/img/IMG_9851-1200x800.jpg);">
+        <div class="bg-overlay"></div>
+        <div class="inner-container">
+            <a href="/" class="nav-btn"><span class="icon-home"></span></a>
+            <div class="title">
+                <h3>
+                    <a href="/" title="Permalink to Homepage" rel="bookmark">Bowen</a>
+                </h3>
+                <h4>Have a nice day</h4>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="main-menu">
+    <div class="menu-expander">
+        <a class="nav-expander fixed" id="nav-expander"><span></span></a>
+    </div>
+    <header>
+        <h1>Hey There</h1>
+        <p>网站正在建设中，部分功能尚未完工</p>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <!-- <a href="#" class="active">technology</a> -->
+                <a href="/category/work/">工作</a>
+                <span class="icon icon-plus"></span>
+                <ul class="sub-menu">
+                    <!-- <li><a href="#" class="active">HTML/CSS</a></li> -->
+                    <li><a href="/category/html_css/">HTML/CSS</a></li>
+                    <li><a href="/category/js/">JS</a></li>
+                    <li><a href="/category/nodejs/">NodeJs</a></li>
+                    <li><a href="/category/others/">其他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/category/life/">生活</a>
+                <span class="icon icon-plus"></span>
+                <ul class="sub-menu">
+                    <li><a href="/category/essay/">随笔</a></li>
+                    <li><a href="/category/journal/">记录</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/about">about</a>
+            </li>
+        </ul>
+    </nav>
+    <footer>
+        <ul class="clearfix">
+            <li>
+                <a href="mailto:fantastic.bowen@gmail.com" title="Mail"><span class="icon-mail"></span></a>
+            </li>
+            <li>
+                <a href="#" title="Github"><span class="icon-github"></span></a>
+            </li>
+            <li>
+                <a href="#" title="Share"><span class="icon-share"></span></a>
+            </li>
+            <li>
+                <a href="/about" title="about"><span class="icon-user"></span></a>
+            </li>
+        </ul>
+        <p><small>All code on this site is under <a href="http://opensource.org/licenses/MIT" target="_blank" class="bold-link">MIT License</a></small></p>
+        <p><small>Hope you enjoy this~</small></p>
+    </footer>
+</div>
+
+
+    <main class="content" role="main">
+      <div class="center">
+        <div class="post">
+    <article class="post-container">
+        <header class="post-header">
+            <h1 class="post-title">阿里云配置Nodejs环境</h1>
+            <div class="post-meta clearfix">
+                
+                <div class="meta date">
+                    <span class="icon-pie-graph"></span>
+                    2015-10-09
+                </div>
+                
+
+                
+                <div class="meta tags">
+                    <span class="icon-tag"></span>
+                    
+                    <a href="/tag/server/">#server</a>
+                    
+                    <a href="/tag/nodejs/">#nodejs</a>
+                    
+                    <a href="/tag/express/">#express</a>
+                    
+                </div>
+                
+            </div>
+        </header>
+        <div class="post-content">
+            <h4 id="1阿里云配置">1.阿里云配置</h4>
+
+<p>CPU：1核，内存：512MB，系统：CentOS 7.0 64位，Linux系统送20G系统盘（Windows送40G），区域：杭州节点，价格：32/月</p>
+
+<h4 id="2服务器基本配置">2.服务器基本配置</h4>
+
+<p>1.在阿里云的管理控制台启动服务器</p>
+
+<p>2.用putty登录服务器（用putty登录一段时间不操作就会自动断线，因为阿里服务器有连接时间限制，目的是为了降低服务器端的连接压力，如果需要一直连接可以在putty的Connection中，将“Seconds between keeplives(0 to turn off)”设置为30）</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100801.png" alt="" /></p>
+
+<p>3.更新软件–yum -y update  （-y命令可以在询问时默认yes）</p>
+
+<h4 id="3安装nodejs">3.安装nodejs</h4>
+
+<p>1.进入/usr/src/目录<code class="highlighter-rouge">cd /usr/src</code></p>
+
+<p>2.从<a href="http://nodejs.org/">nodejs官网</a>获取最新的nodejs</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>wget https://nodejs.org/dist/v4.1.2/node-v4.1.2.tar.gz
+</code></pre>
+</div>
+
+<p>也可从<a href="https://nodejs.org/en/download/">这里</a>找到Source Code，查看最新版本后下载）</p>
+
+<p>3.安装</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>tar zxvf node-v4.1.2.tar.gz
+cd node-v4.1.2
+./configure --prefix=/home/node/v4.1.2  //编译预处理
+make  //编译源代码 
+make install
+</code></pre>
+</div>
+
+<p>4.添加nodejs到系统环境</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>echo "export PATH=$PATH:/home/node/v4.1.2/bin" &gt;&gt; ~/.bash_profile
+</code></pre>
+</div>
+
+<p>5.输入node -v测试</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100802.png" alt="" /></p>
+
+<h4 id="4安装express">4.安装Express</h4>
+
+<p><code class="highlighter-rouge">npm install express -gd</code> （-d可以同时安装依赖的模块包）</p>
+
+<p>此时输入express -V会出现  <code class="highlighter-rouge">express: command not found.</code></p>
+
+<p>原来是express4版本更新，之前版本命令行工具是集成在一起的，新版本单独分离到express-generator中了，所以需要</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g express-generator
+</code></pre>
+</div>
+
+<p>然后再输入<code class="highlighter-rouge">express -V</code></p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100803.png" alt="" /></p>
+
+<p>测试express：输入express test -e（选择ejs模板），cd test， npm install，安装完成后输入 npm start启动应用，然后就可以在浏览器中输入 ip地址:3000  访问</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100804.png" alt="" /></p>
+
+<h4 id="5安装pm2-在另外一篇中详细介绍pm2">5.安装<a href="http://pm2.keymetrics.io/">pm2</a> （在另外一篇中详细介绍pm2）</h4>
+
+<p>pm2 是一个带有负载均衡功能的Node应用的进程管理器，不了解的同学可以先去官网看看介绍，以后会单独写一篇关于pm2的文章.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install pm2 -g
+</code></pre>
+</div>
+
+<p>完成之后输入<code class="highlighter-rouge">pm2 list</code></p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100805.png" alt="" /></p>
+
+<p>证明安装成功</p>
+
+<p>然后输入<code class="highlighter-rouge"> pm2 start ./bin/www</code></p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100806.png" alt="" /></p>
+
+<p>这样网站就能在后台运行了</p>
+
+<p>启动程序：<code class="highlighter-rouge">pm2 start &lt;app_name|id|all&gt;</code></p>
+
+<p>可以指定应用名称 pm2 start app,js –name=test</p>
+
+<p>列举进程：<code class="highlighter-rouge">pm2 list</code></p>
+
+<p>退出程序：<code class="highlighter-rouge">pm2 stop &lt;app_name|id|all&gt;</code></p>
+
+<p>重起应用：<code class="highlighter-rouge">pm2 restart</code></p>
+
+<h4 id="6安装mongodb">6.安装MongoDB</h4>
+
+<p>进入<code class="highlighter-rouge">/usr/local/</code></p>
+
+<p>下载安装包：<code class="highlighter-rouge">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz</code></p>
+
+<p>安装：<code class="highlighter-rouge">tar -zxvf mongodb-linux-x86_64-3.0.6.tgz</code></p>
+
+<p>将安装好后的目录重命名为mongodb：<code class="highlighter-rouge">mv mongodb-linux-x86_64-3.0.6 mongodb</code></p>
+
+<p>切换到mongodb/bin目录</p>
+
+<p>启动数据库：<code class="highlighter-rouge">./mongod --dbpath=/usr/local/programs/mongodb/data/ --logpath=/usr/local/programs/mongodb/log/mongodb.log --port=27017 --fork</code>
+(–fork可以让数据库进程在后台执行，不会影响当前命令行输入)</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100807.png" alt="" /></p>
+
+<p>查看端口占用情况：<code class="highlighter-rouge">netstat -tlunp</code></p>
+
+<p>关闭mongodb：<code class="highlighter-rouge">pkill mongod</code></p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100808.png" alt="" /></p>
+
+<p>使用Robomongo连接</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100809.png" alt="" /></p>
+
+<p>为了方便启动，将配置信息存储到文件中：</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100810.png" alt="" /></p>
+
+<p>解释说明：</p>
+
+<p>port=10001【代表端口号，如果不指定则默认为 27017 】</p>
+
+<p>dbpath=data/ 【数据库路径】</p>
+
+<p>logpath=log/mongodb.log 【日志路径】</p>
+
+<p>logappend=true 【日志文件自动累加，而不是覆盖】</p>
+
+<p>auth=true 需要用户身份验证</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100811.png" alt="" /></p>
+
+<p>数据库启动成功</p>
+
+<p>添加用户</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100812.png" alt="" /></p>
+
+<p>登录  ./bin/mongo 127.0.0.1/数据路名-u 用户名 -p</p>
+
+<p><img src="http://bowen-blog.b0.upaiyun.com/img/2015/100813.png" alt="" /></p>
+
+        </div>
+    </article>
+</div>
+<script>
+    var pres = document.getElementsByTagName('pre');
+    for(var pre in pres){
+        pres[pre].className = 'line-numbers';
+    }
+</script>
+<script src="/public/js/vendor/prism.js"></script>
+
+      </div>
+    </main>
+
+    <footer class="main-footer">
+    <div class="copyright">
+        <p><small>© 2016 Bowen. All rights reserved.</small></p>
+        <p><small>Built with <a href="http://jekyllrb.com/" target="_blank" class="bold-link">Jekyll</a></small></p>
+        <p><small>Proudly designed by myself.</small></p>
+    </div>
+</footer>
+
+  </div>
+  <!--<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.0.7/js/swiper.min.js"></script>-->
+<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<!-- <script src="/public/js/vendor/jquery.pjax.js"></script> -->
+<script>
+window.jQuery || document.write('<script src="/public/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="/public/js/plugins.js"></script>
+<script src="/public/js/index.js"></script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>-->
+<script type="text/javascript">
+function loadFont() {
+    WebFontConfig = {
+        google: {
+            families: ['PT+Sans:400,700:latin']
+        }
+    };
+    (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        // wf.onload = function(){
+        // 	console.log(1);
+        // }
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+}
+// window.onload = loadFont();
+
+// $(document).pjax('.next-page', '#pjax-container', { fragment: "#pjax-container", timeout: 10000 });
+var currentPage = 1,
+	$articleList = $('.article-list'),
+	$nextPage = $('.next-page'),
+	loadLock = false; 
+$('.next-page').click(function(event) {
+	if(loadLock) return false;
+	loadLock = true;
+	$nextPage.addClass('active');
+	$.get($(this).attr('href'), function(data) {
+		var $result = $(data);
+		var pageNum = $result.find('.next-page').attr('href');
+		if(pageNum){
+			$articleList.append($result.find('.article-list article'));
+			$nextPage.attr('href', $result.find('.next-page').attr('href'));
+		}else{
+			$nextPage.find('.load-text').text('没有了');
+		}
+		$nextPage.removeClass('active');
+		loadLock = false;
+	});
+	// console.log($(this).attr('href'));
+	return false;
+});
+</script>
+
+  </body>
+
+</html>

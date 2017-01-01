@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>imgFullview demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loading loading2">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="frame1 swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide preload" data-source="img/1.jpg"></div>
+            <div class="swiper-slide preload" data-source="img/2.jpg"></div>
+            <div class="swiper-slide preload" data-source="img/3.jpg"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="gradient"></div>
+        <div class="swiper-pagination">
+            <p>
+                &lt;<span class="page-number">01</span>/3&gt;
+            </p>
+        </div>
+    </div>
+    <div class="landscape_page">
+        <i class="icon"></i>
+        <span>为了更好的体验，请使用竖屏浏览</span>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/gsap/latest/TweenMax.min.js"></script>
+    <script src="http://cdn.bootcss.com/Swiper/3.0.7/js/swiper.min.js"></script>
+    <script src="js/imgFullView.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>');
+    </script>
+    <script src="app.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>-->
+</body>
+
+</html>
