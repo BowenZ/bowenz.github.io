@@ -1499,7 +1499,7 @@ p img {
   }
   section.previous-articles .article-list article > div {
     float: none;
-    width: 100%;
+    width: 100%!important;
   }
   section.previous-articles .article-list article .article-preview p {
     margin-bottom: 6px;
