@@ -804,7 +804,7 @@ pre[class*="language-"] {
 }
 pre.line-numbers {
   position: relative;
-  padding-left: 3.8em;
+  padding-left: 5%;
   counter-reset: linenumber;
 }
 pre.line-numbers > code {
@@ -1066,7 +1066,7 @@ body {
   top: 0;
   right: 0;
   line-height: 20px;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -1433,8 +1433,8 @@ p img {
     right: -257px;
     padding-top: 0;
   }
-  .main-menu.active .menu-expander {
-    right: 250px;
+  .main-menu header {
+    margin-top: 4em;
   }
   .main-menu.active .menu-expander .nav-expander:before {
     top: 18px;

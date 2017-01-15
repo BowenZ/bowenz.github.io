@@ -60,8 +60,9 @@ layout: default
             {% endif %}
             <div class="article-preview">
                 <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-                <h2>{{page.categories}}</h2>
+                {% if post.subtitle %}
                 <h3>{{ post.subtitle }}</h3>
+                {% endif %}
                 <p>
                     {{ post.content | strip_html | truncate:100 }}
                 </p>
