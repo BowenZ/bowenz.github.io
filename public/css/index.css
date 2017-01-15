@@ -1313,11 +1313,11 @@ section.previous-articles .article-list article .article-preview .read-more {
   text-transform: uppercase;
 }
 .desktop .article-img img {
-  -webkit-filter: grayscale(50%);
-  filter: grayscale(50%);
-  transition: all 0.2s ease-out;
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%);
+  transition: all 0.15s ease-out;
 }
-.desktop .article-img img:hover {
+.desktop .latest-article article:hover .article-img img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }

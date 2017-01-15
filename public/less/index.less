@@ -519,10 +519,12 @@ section {
 
 .desktop {
     .article-img img {
-        -webkit-filter: grayscale(50%);
-        filter: grayscale(50%);
-        transition: all .2s ease-out;
-        &:hover {
+        -webkit-filter: grayscale(20%);
+        filter: grayscale(20%);
+        transition: all .15s ease-out;
+    }
+    .latest-article article:hover{
+        .article-img img {
             -webkit-filter: grayscale(0);
             filter: grayscale(0);
         }

@@ -31,7 +31,7 @@ titleimg: "2017-01-07-react-or-vue.png"
 Alexis有一天问我：“你为什么这么喜欢用Vue，而不是React？” 考虑到我并不十分了解React，我无法给出一个确切的答案。因此我提出了一个方案，我们两个找个时间带着电脑坐下来，向对方介绍我们各自所选择的库能带来哪些好处。
 
 ![Anthony (left) and Alexis (right) comparing React and Vue at Bull and Bear Cafe in Chiang Mai, Thailand
-](/img/2017/011501.jpg)
+](/public/img/2017/011501.jpg)
 
 
 经过了大量讨论和相互学习，我们得出了以下六点最主要的发现：
@@ -42,12 +42,15 @@ Alexis有一天问我：“你为什么这么喜欢用Vue，而不是React？”
 
 下面是一个简单的Vue应用示例。该示例能打印一句话，还有一个可将这句话反转的按钮。
 
-```
+```html
 // HTML
 <div id="app">
   <p>{{ message }}</p>
   <button v-on:click="reverseMessage">Reverse Message</button>
 </div>
+```
+
+```js
 // JS
 new Vue({
   el: '#app',
@@ -64,10 +67,12 @@ new Vue({
 
 相反，React应用避开了模板，需要开发者在Javascript中创建DOM，通常使用JSX辅助。下面是使用React构建的同样的应用：
 
-```
+```html
 // HTML
 <div id="app"></div>
+```
 
+```js
 // JS (pre-transpilation)
 class App extends React.Component {
   constructor(props) {
@@ -109,7 +114,7 @@ ReactDOM.render(App, document.getElementById('app'));
 
 state在React中是不可变的（immutable），因此不能直接改变它的值。应使用*setState*方法。
 
-```
+```js
 this.setState({ 
     message: this.state.message.split('').reverse().join('') 
 });
@@ -119,7 +124,7 @@ this.setState({
 
 与之相反的是，数据在Vue中是可变的。相同的数据在Vue中可以更简单地修改。
 
-```
+```js
 // Note that data properties are available as properties of 
 // the Vue instance
 this.message = this.message.split('').reverse().join('');
@@ -137,7 +142,7 @@ React和Vue都会创建一个虚拟的DOM并在app中的state改变时同步到�
 
 Vue的核心开发者们提供了一个基准测试，这个测试表明Vue的渲染系统要比React的更快。在这个测试中有10,000个项目被渲染了100次。测试比较结果如下：
 
-![comparison](/img/2017/011502.png)
+![comparison](/public/img/2017/011502.png)
 
 从实用的角度来看，这种衡量只适用于极端情况。多数app不需要做这种大规模程序化的操作，因此这个结果通常不作为二者比较的关键点。
 
@@ -161,7 +166,7 @@ Vue也有组件系统和渲染功能，但React的渲染系统更易配置，而
  
 React Native是使用Javascript来构建本地手机应用程序（native mobile applications）的库。它和React.js相似，只不过并不使用web组件，而改为使用本地组件。如果你已经学过了React.js，你会很容易上手React Native，反之亦然。
  
- ```
+ ```js
  // JS
 import React, { Component } from 'react'; 
 import { AppRegistry, Text, View } from 'react-native';  
@@ -187,7 +192,7 @@ AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 
 毫无疑问，React是当前最受欢迎的库，它在NPM上有~2.5M的每月下载量，而Vue只有~225K/M。
 
-![二者下载量对比](/img/2017/011503.png)
+![二者下载量对比](/public/img/2017/011503.png)
 
 受欢迎程度不仅仅是一个浅显的优势。它意味着会有更多文章、教程和Stack Overflow答案作为帮助。它意味着在项目中会有更多的工具和插件使用，让开发者不需要所有功能都自己编写。
 
