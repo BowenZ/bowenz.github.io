@@ -166,7 +166,7 @@ Vue也有组件系统和渲染功能，但React的渲染系统更易配置，而
  
 React Native是使用Javascript来构建本地手机应用程序（native mobile applications）的库。它和React.js相似，只不过并不使用web组件，而改为使用本地组件。如果你已经学过了React.js，你会很容易上手React Native，反之亦然。
  
- ```js
+```js
  // JS
 import React, { Component } from 'react'; 
 import { AppRegistry, Text, View } from 'react-native';  
@@ -180,7 +180,7 @@ class HelloWorld extends Component {
   }
 }
 AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
- ```
+```
  
 重要的是开发者不需要一套不同的知识和工具就可以同时在web和native mobile 上开发app。如果你打算同时在这两个平台上开发，那么Reaect会给你带来极大的便捷。
 
