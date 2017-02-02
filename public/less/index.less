@@ -13,7 +13,7 @@ body {
     border: 0;
 }
 
-figure{
+figure {
     margin: 1em 0;
 }
 
@@ -518,22 +518,27 @@ section {
 }
 
 .desktop {
-    .article-img img {
-        -webkit-filter: grayscale(20%);
-        filter: grayscale(20%);
-        transition: all .15s ease-out;
+    .article-img {
+        overflow: hidden;
+        img {
+            -webkit-filter: grayscale(20%);
+            filter: grayscale(20%);
+            transition: all .2s ease-out;
+        }
     }
-    .latest-article article:hover{
+    .latest-article article:hover {
         .article-img img {
             -webkit-filter: grayscale(0);
             filter: grayscale(0);
+            // transform: scale(1.01) translate3d(0, 0, 0);
         }
     }
-    .article-list article{
-        &:hover{
+    .article-list article {
+        &:hover {
             .article-img img {
                 -webkit-filter: grayscale(0);
                 filter: grayscale(0);
+                // transform: scale(1.01) translate3d(0, 0, 0);
             }
         }
     }
@@ -653,7 +658,7 @@ p {
     .page-left {
         display: none;
     }
-    .article-img.no-img{
+    .article-img.no-img {
         display: none;
     }
     .content,
@@ -668,16 +673,16 @@ p {
         width: 250px;
         right: -257px;
         padding-top: 0;
-        header{
+        header {
             margin-top: 4em;
         }
         &.active .menu-expander {
             // right: 250px;
-            .nav-expander{
-                &:before{
+            .nav-expander {
+                &:before {
                     top: 18px;
                 }
-                &:after{
+                &:after {
                     top: 18px;
                 }
             }
@@ -726,15 +731,24 @@ p {
             clear: both;
         }
         a .img-box .title {
+            position: static;
+            background: none;
+            padding: 5px 20px;
             h2 {
                 font-size: 20px;
                 line-height: 24px;
                 margin: 0;
+                color: inherit;
             }
             h3 {
                 font-size: 16px;
                 margin: 0;
+                color: inherit;
+                line-height: inherit;
             }
+        }
+        p {
+            margin: 0;
         }
         .read-more {
             float: right;
@@ -758,6 +772,7 @@ p {
         }
     }
 }
+
 
 
 /* +++++++++++++++post+++++++++++++++ */
