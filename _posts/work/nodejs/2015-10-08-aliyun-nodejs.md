@@ -6,7 +6,7 @@ description: "Bowen的私房博客，记录一切"
 keywords: 阿里云,nodejs,Express,MongoDB
 categories: [work, nodejs]
 tags: [server, nodejs, express]
-titleimg: "photo-1436564989038-18b9958df72b.jpg"
+titleimg: "2015-10-08-aliyun-nodejs.jpg"
 ---
 
 #### 1.阿里云配置

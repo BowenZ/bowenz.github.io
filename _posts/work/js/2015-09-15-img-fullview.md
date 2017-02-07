@@ -6,7 +6,7 @@ description: "可以让较宽图片在手机横屏状态全屏显示，并随手
 keywords: 重力感应,JS,插件
 categories: [work, js]
 tags: jsLib
-titleimg: "IMG_2718-1200x800.jpg"
+titleimg: "2015-09-15-img-fullview.jpg"
 ---
 
 这几天项目中遇到了一个问题：在手机竖屏状态下查看16:9尺寸的图片时，如果使图片宽度100%的话，由于图片的比例，手机上下会有空白处，而且图片整体比较小，体验不是很好。
