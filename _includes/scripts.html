@@ -39,6 +39,7 @@ function loadFont() {
 // window.onload = loadFont();
 
 // $(document).pjax('.next-page', '#pjax-container', { fragment: "#pjax-container", timeout: 10000 });
+
 var currentPage = 1,
 	$articleList = $('.article-list'),
 	$nextPage = $('.next-page'),
@@ -48,16 +49,17 @@ $('.next-page').click(function(event) {
 	loadLock = true;
 	$nextPage.addClass('active');
 	$.get($(this).attr('href'), function(data) {
-		var $result = $(data);
+		var $result = $(data.substring(data.indexOf('<main'),data.indexOf('/main>')+6));
 		var pageNum = $result.find('.next-page').attr('href');
+        $articleList.append($result.find('.article-list article'));
 		if(pageNum){
-			$articleList.append($result.find('.article-list article'));
 			$nextPage.attr('href', $result.find('.next-page').attr('href'));
+            loadLock = false;
 		}else{
 			$nextPage.find('.load-text').text('没有了');
 		}
 		$nextPage.removeClass('active');
-		loadLock = false;
+		
 	});
 	// console.log($(this).attr('href'));
 	return false;
