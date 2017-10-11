@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试分辨率</title>
+</head>
+<body>
+	<h1 id="aa">
+		
+	</h1>
+	<script>
+		window.onload = function(){
+			setTimeout(function() {
+				document.getElementById('aa').innerText = '当前分辨率为：' + window.innerWidth + ' x ' + window.innerHeight
+			}, 100);
+		}
+	</script>
+</body>
+</html>
