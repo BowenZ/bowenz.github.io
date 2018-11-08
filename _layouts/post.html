@@ -1,38 +1,39 @@
---- 
-layout: default 
+---
+layout: default
 ---
 
 <div class="post">
-    <article class="post-container">
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-meta clearfix">
-                {% if page.date %}
-                <div class="meta date">
-                    <span class="icon-pie-graph"></span>
-                    {{ page.date | date: "%Y-%m-%d" }}
-                </div>
-                {% endif %}
-
-                {% if page.tags %}
-                <div class="meta tags">
-                    <span class="icon-tag"></span>
-                    {% for tag in page.tags %}
-                    <a href="/tag/{{tag}}/">#{{ tag }}</a>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </header>
-        <div class="post-content">
-            {{ content }}
+  <article class="post-container">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta clearfix">
+        {% if page.date %}
+        <div class="meta date">
+          <span class="icon-pie-graph"></span>
+          {{ page.date | date: "%Y-%m-%d" }}
         </div>
-    </article>
+        {% endif %}
+
+        {% if page.tags %}
+        <div class="meta tags">
+          <span class="icon-tag"></span>
+          {% for tag in page.tags %}
+          <a href="/tag/{{tag}}/">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </header>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+  <div id="toc"></div>
 </div>
 <script>
-    var pres = document.getElementsByTagName('pre');
-    for(var pre in pres){
-        pres[pre].className = 'line-numbers';
-    }
+  var pres = document.getElementsByTagName('pre');
+  for (var pre in pres) {
+    pres[pre].className = 'line-numbers';
+  }
 </script>
 <script src="/public/js/vendor/prism.js"></script>

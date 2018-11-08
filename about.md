@@ -1,23 +1,18 @@
 ---
-layout: post
+layout: page
 title: About
 permalink: /about/
 ---
 
-今年（2016年）有太多事情，心一直放不下来，所以这个博客就一直没更新，如果明年能够柳暗花明，我会将这个博客功能完善，继续回来写东西。
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
---2016年7月12日
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
 
-----------
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
 
-这是赵先生的个人博客，主要写一些技术和生活上的东西。
 
-赵先生是初入前端的技术小白，正在学习当中，博客的内容尚不具有权威性（难道以后就会有了吗？），如有疏漏之处，望请看官斧正。
-
-博客基于[Jekyll](http://jekyllrb.com/)，托管于Github。
-
-暂时没时间打理，所以样式简陋了些，以后有时间再装修一下吧。
-
-如果联系我，可以发邮件到[我的邮箱](mailto:fantastic.bowen@gmail.com)
-
---2015年8月
+[jekyll-organization]: https://github.com/jekyll

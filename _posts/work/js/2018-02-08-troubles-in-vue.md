@@ -53,7 +53,7 @@ renderContent(h, { node, data, store }) {
 
 #### 安装
 
-```
+```shell
 npm install\
   babel-plugin-syntax-jsx\
   babel-plugin-transform-vue-jsx\

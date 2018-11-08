@@ -1,10 +1,24 @@
-# Site settings
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# ++++++meta tags+++++++
-title: Bowen Blog
-email: fantastic.bowen@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  赵先生写日志的地方
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 keywords: Bowen 博客 blog 前端 NodeJS
 robots: all  	
 #all：文件将被检索，且页面上的链接可以被查询；
@@ -14,22 +28,37 @@ robots: all
 #noindex：文件将不被检索，但页面上的链接可以被查询；(不让robot/spider登录)
 #nofollow：文件将不被检索，页面上的链接可以被查询。(不让robot/spider顺着此页的连接往下探找)
 author: ZhaoBowen
-# ++++++++++++++++++++++
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog
 imgurl: /public/img/
-url: http://zbw.life # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  BowenZ
 encoding: UTF-8
+
 # Build settings
 markdown: kramdown
-highlighter: rouge
-permalink: /blog/:year/:month/:day/:title
+# highlighter: rouge
+theme: minima
 
 # custom
 indeximg: bg.jpg
 
-gems: [jekyll-paginate]
-paginate: 5   #这里指定你每一页的文章数目，我这里指定每页最多2篇文章
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+paginate: 20   #这里指定你每一页的文章数目，我这里指定每页最多2篇文章
 paginate_path: "/page:num/"   #这里是分页链接的格式，例如第二页会显示在'/page2/'
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

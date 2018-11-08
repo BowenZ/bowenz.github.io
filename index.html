@@ -99,6 +99,7 @@ layout: default
 
 <script>
     if(window.location.pathname == '/'){
-        document.querySelector('.previous-articles').querySelector('article').remove()
+        var previousArticle = document.querySelector('.previous-articles').querySelector('article')
+        previousArticle && previousArticle.remove()
     }
 </script>
