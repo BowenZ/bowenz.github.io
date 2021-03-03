@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/pages/rc-danmaku/static/js/main.b3391c3b.chunk.js",
-    "main.js.map": "/pages/rc-danmaku/static/js/main.b3391c3b.chunk.js.map",
+    "main.js": "/pages/rc-danmaku/static/js/main.b407ee49.chunk.js",
+    "main.js.map": "/pages/rc-danmaku/static/js/main.b407ee49.chunk.js.map",
     "runtime-main.js": "/pages/rc-danmaku/static/js/runtime-main.781ed001.js",
     "runtime-main.js.map": "/pages/rc-danmaku/static/js/runtime-main.781ed001.js.map",
     "static/js/2.8aabd45e.chunk.js": "/pages/rc-danmaku/static/js/2.8aabd45e.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.781ed001.js",
     "static/js/2.8aabd45e.chunk.js",
-    "static/js/main.b3391c3b.chunk.js"
+    "static/js/main.b407ee49.chunk.js"
   ]
 }
